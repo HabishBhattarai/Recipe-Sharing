@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Sharing - Recipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand text-success" href="index.html">Recipe Sharing</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="submit.html">Submit Recipe</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <section class="mb-4" id="recipeHeader">
+      <div class="page-header p-4">
+        <span class="badge text-bg-light border" id="recipeCategory">Breakfast</span>
+        <h1 class="display-6 mt-2" id="recipeName">Cheesy Veg Omelette</h1>
+        <p class="text-muted mb-0" id="recipeDescription">A simple, protein-rich omelette with veggies and melted cheese.</p>
+      </div>
+    </section>
+
+    <section class="row g-4">
+      <article class="col-lg-5">
+        <div class="surface-card p-4 h-100">
+          <h2 class="h5 section-title">Ingredients</h2>
+          <ul class="mb-0" id="ingredientsList">
+            <li>2 eggs</li>
+            <li>2 tbsp milk</li>
+            <li>1/4 cup chopped onion</li>
+            <li>1/4 cup chopped tomato</li>
+            <li>1/4 cup spinach</li>
+            <li>2 tbsp grated cheese</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="col-lg-7">
+        <div class="surface-card p-4 h-100">
+          <h2 class="h5 section-title">Steps</h2>
+          <ol class="mb-0" id="stepsList">
+            <li>Whisk eggs, milk, salt, and pepper in a bowl.</li>
+            <li>Heat a non-stick pan and saute onion, tomato, and spinach.</li>
+            <li>Pour the egg mixture and cook on low heat.</li>
+            <li>Add cheese on top and fold the omelette.</li>
+            <li>Cook until set and serve warm.</li>
+          </ol>
+        </div>
+      </article>
+    </section>
+
+    <section class="mt-4">
+      <a class="btn btn-outline-success" href="index.html#recipes">Back to Recipes</a>
+    </section>
+  </main>
+
+  <footer class="bg-white py-4">
+    <div class="container">
+      <div class="text-center">
+        <h4 class="h6 mb-1">Recipe Sharing</h4>
+        <p class="text-muted mb-0">Copyright (c) 2026 Recipe Sharing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Recipe database
+    const recipes = {
+      omelette: {
+        category: 'Breakfast',
+        name: 'Cheesy Veg Omelette',
+        description: 'Stuffed omelette with cheese and fresh vegetables.',
+        ingredients: [
+          '3 eggs',
+          '1/2 cup cheese (shredded)',
+          '1/4 cup bell peppers (chopped)',
+          '1/4 cup onions (chopped)',
+          '1/4 cup tomatoes (chopped)',
+          '1 tbsp butter',
+          'Salt and pepper to taste',
+          'Pinch of turmeric'
+        ],
+        steps: [
+          'Beat 3 eggs with salt, pepper, and a pinch of turmeric.',
+          'Heat butter on a non-stick pan over medium heat.',
+          'Add chopped onions and sauté for 1 minute.',
+          'Add bell peppers and tomatoes, cook for another minute.',
+          'Pour the beaten eggs over the vegetables.',
+          'Let it cook for 30 seconds without stirring.',
+          'Sprinkle shredded cheese on one half of the omelette.',
+          'Once the edges are set, fold the omelette in half.',
+          'Cook for another 30 seconds and slide onto a plate.',
+          'Serve hot with toast or bread.'
+        ]
+      },
+      pancakes: {
+        category: 'Breakfast',
+        name: 'Banana Pancakes',
+        description: 'Fluffy pancakes made with ripe bananas and flour.',
+        ingredients: [
+          '2 ripe bananas',
+          '1 cup all-purpose flour',
+          '2 eggs',
+          '1 cup milk',
+          '1 tbsp sugar',
+          '1 tsp baking powder',
+          '1/4 tsp salt',
+          'Butter for cooking'
+        ],
+        steps: [
+          'Mash bananas in a bowl until smooth.',
+          'Mix flour, baking powder, sugar, and salt in a separate bowl.',
+          'In another bowl, whisk eggs and milk together.',
+          'Combine wet and dry ingredients, then fold in mashed bananas.',
+          'Heat butter on a non-stick pan over medium heat.',
+          'Pour 1/4 cup batter per pancake onto the pan.',
+          'Cook until bubbles form on the surface, then flip and cook the other side.',
+          'Serve warm with honey or maple syrup.'
+        ]
+      },
+      toast: {
+        category: 'Breakfast',
+        name: 'Peanut Butter Toast',
+        description: 'Creamy peanut butter on toast with a drizzle of honey.',
+        ingredients: [
+          '2 slices bread',
+          '3 tbsp creamy peanut butter',
+          '1 tbsp honey',
+          '1/4 tsp cinnamon (optional)',
+          'Pinch of salt'
+        ],
+        steps: [
+          'Toast the bread slices until golden brown.',
+          'Spread peanut butter evenly on each toast slice.',
+          'Drizzle honey over the peanut butter.',
+          'Sprinkle cinnamon if desired for extra flavor.',
+          'Serve immediately while toast is warm.'
+        ]
+      },
+      wrap: {
+        category: 'Lunch',
+        name: 'Spicy Chickpea Wrap',
+        description: 'Affordable wrap with chickpeas, salad, and yogurt sauce.',
+        ingredients: [
+          '1 can chickpeas (drained)',
+          '2 flour tortillas',
+          '1/4 cup yogurt',
+          '1 tbsp lemon juice',
+          '1 tsp cumin powder',
+          '1/2 tsp red chili powder',
+          '1 cup mixed salad (lettuce, tomato, cucumber)',
+          'Salt and pepper to taste'
+        ],
+        steps: [
+          'Mix chickpeas with cumin, chili powder, lemon juice, salt, and pepper.',
+          'Cook the spiced chickpeas in a pan over medium heat for 5 minutes.',
+          'Mix yogurt with salt and a pinch of cumin to make sauce.',
+          'Warm the tortillas and spread yogurt sauce on them.',
+          'Add the cooked chickpeas and fresh salad in the center.',
+          'Roll the tortilla tightly and wrap with foil.',
+          'Serve immediately.'
+        ]
+      },
+      rice: {
+        category: 'Lunch',
+        name: 'Veg Fried Rice',
+        description: 'Quick and tasty fried rice with mixed vegetables.',
+        ingredients: [
+          '2 cups cooked rice (chilled)',
+          '1/2 cup carrots (diced)',
+          '1/2 cup peas',
+          '1/2 cup corn',
+          '2 eggs (beaten)',
+          '2 tbsp soy sauce',
+          '2 cloves garlic (minced)',
+          '2 tbsp oil',
+          'Salt and pepper to taste'
+        ],
+        steps: [
+          'Heat oil in a wok or large pan over high heat.',
+          'Add minced garlic and sauté for 30 seconds.',
+          'Add beaten eggs and scramble until cooked, then remove from pan.',
+          'Add carrots and cook for 2 minutes.',
+          'Add peas and corn, cook for another 2 minutes.',
+          'Add the chilled rice and break up any clumps.',
+          'Pour soy sauce and mix everything well.',
+          'Add the scrambled eggs back and toss everything together.',
+          'Season with salt and pepper. Serve hot.'
+        ]
+      },
+      sandwich: {
+        category: 'Lunch',
+        name: 'Paneer Sandwich',
+        description: 'Grilled paneer sandwich with fresh veggies and mayo.',
+        ingredients: [
+          '200g paneer (sliced)',
+          '4 bread slices',
+          '2 tbsp mayonnaise',
+          '1/2 cup sliced tomatoes',
+          '1/2 cup sliced cucumbers',
+          '1/2 cup sliced onions',
+          '1 tbsp butter',
+          'Salt and pepper to taste'
+        ],
+        steps: [
+          'Spread mayonnaise on two bread slices.',
+          'Layer paneer slices, tomatoes, cucumbers, and onions on one slice.',
+          'Top with the other bread slice (mayo side down).',
+          'Heat butter on a pan or griddle over medium heat.',
+          'Place the sandwich on the pan and grill for 2-3 minutes until golden.',
+          'Carefully flip and grill the other side for 2-3 minutes.',
+          'Cut diagonally and serve hot.'
+        ]
+      },
+      pasta: {
+        category: 'Dinner',
+        name: 'One-Pot Tomato Pasta',
+        description: 'Simple and delicious pasta cooked in one pot.',
+        ingredients: [
+          '200g pasta',
+          '1 can crushed tomatoes (400g)',
+          '3 cups water',
+          '2 cloves garlic (minced)',
+          '1 onion (diced)',
+          '2 tbsp oil',
+          '1/2 tsp oregano',
+          'Salt and pepper to taste',
+          'Parmesan cheese (optional)'
+        ],
+        steps: [
+          'Heat oil in a large pot over medium heat.',
+          'Sauté onion and garlic until fragrant (about 2 minutes).',
+          'Add crushed tomatoes and stir well.',
+          'Add 3 cups of water and bring to a boil.',
+          'Add pasta directly to the pot (no need to cook separately).',
+          'Add oregano, salt, and pepper.',
+          'Stir occasionally and cook for 12-15 minutes until pasta is tender.',
+          'If the sauce looks too thin, simmer for another 2-3 minutes.',
+          'Taste and adjust seasoning as needed.',
+          'Top with Parmesan cheese and serve hot.'
+        ]
+      },
+      soup: {
+        category: 'Dinner',
+        name: 'Lentil Soup',
+        description: 'Warming lentil soup with carrots and cumin spice.',
+        ingredients: [
+          '1 cup red lentils',
+          '4 cups water',
+          '2 carrots (diced)',
+          '1 onion (diced)',
+          '2 cloves garlic (minced)',
+          '1 tsp cumin powder',
+          '1 tbsp oil',
+          'Salt and pepper to taste',
+          'Lemon juice to taste'
+        ],
+        steps: [
+          'Rinse lentils and set aside.',
+          'Heat oil in a pot and sauté onion and garlic for 2 minutes.',
+          'Add diced carrots and cook for another 2 minutes.',
+          'Add lentils and cumin powder, stir well.',
+          'Pour 4 cups of water and bring to a boil.',
+          'Reduce heat and simmer for 20-25 minutes until lentils are soft.',
+          'Stir occasionally to prevent sticking.',
+          'Add salt, pepper, and lemon juice to taste.',
+          'Serve hot with bread or rice.'
+        ]
+      },
+      garlicrice: {
+        category: 'Dinner',
+        name: 'Garlic Rice with Beans',
+        description: 'Fluffy garlic rice served with butter beans.',
+        ingredients: [
+          '2 cups cooked rice',
+          '1 can butter beans (drained)',
+          '4 cloves garlic (minced)',
+          '2 tbsp butter',
+          '2 tbsp oil',
+          '1/2 tsp black pepper',
+          'Salt to taste',
+          '2 tbsp fresh parsley (chopped)'
+        ],
+        steps: [
+          'Heat butter and oil in a large pan over medium heat.',
+          'Add minced garlic and sauté for 1-2 minutes until fragrant.',
+          'Add cooked rice and stir well to coat with garlic butter.',
+          'Add drained butter beans and mix gently.',
+          'Cook for 5 minutes, stirring occasionally.',
+          'Season with salt and black pepper to taste.',
+          'Add fresh parsley and toss everything together.',
+          'Serve hot as a main dish or side.'
+        ]
+      },
+      nachos: {
+        category: 'Snacks',
+        name: 'Cheese Nachos',
+        description: 'Loaded nachos with melted cheese and toppings.',
+        ingredients: [
+          '200g tortilla chips',
+          '2 cups shredded cheese',
+          '1/2 cup jalapeños (sliced)',
+          '1/4 cup corn',
+          '1/4 cup black beans',
+          '2 tbsp sour cream',
+          '1/4 cup salsa',
+          'Salt to taste'
+        ],
+        steps: [
+          'Spread tortilla chips on a baking tray.',
+          'Distribute shredded cheese over the chips.',
+          'Sprinkle jalapeños, corn, and black beans on top.',
+          'Preheat oven to 200°C and bake for 10-12 minutes until cheese melts.',
+          'Remove from oven and let cool for 2 minutes.',
+          'Top with sour cream and salsa.',
+          'Serve immediately while hot.'
+        ]
+      },
+      chickpeas: {
+        category: 'Snacks',
+        name: 'Roasted Chickpeas',
+        description: 'Crispy, protein-rich roasted chickpea snack.',
+        ingredients: [
+          '1 can chickpeas (drained and dried)',
+          '1 tbsp oil',
+          '1 tsp paprika powder',
+          '1/2 tsp cumin powder',
+          '1/2 tsp garlic powder',
+          'Salt and pepper to taste'
+        ],
+        steps: [
+          'Drain, rinse, and pat dry the chickpeas thoroughly.',
+          'Toss chickpeas with oil in a bowl.',
+          'Add paprika, cumin, garlic powder, salt, and pepper.',
+          'Mix well to coat all chickpeas evenly.',
+          'Spread on a baking tray in a single layer.',
+          'Roast at 200°C for 25-30 minutes, stirring halfway through.',
+          'They should be golden and crispy when done.',
+          'Cool on the tray before serving to get crispier.'
+        ]
+      },
+      granola: {
+        category: 'Snacks',
+        name: 'Homemade Granola',
+        description: 'Healthy crunchy granola with oats and nuts.',
+        ingredients: [
+          '2 cups rolled oats',
+          '1/2 cup almonds (chopped)',
+          '1/4 cup cashews (chopped)',
+          '1/4 cup honey',
+          '1/4 cup oil',
+          '1/2 tsp vanilla extract',
+          '1/4 cup raisins',
+          '1/4 tsp salt'
+        ],
+        steps: [
+          'Mix oats, almonds, and cashews in a large bowl.',
+          'In another bowl, combine honey, oil, and vanilla extract.',
+          'Pour the wet mixture over the dry ingredients and mix well.',
+          'Spread on a baking tray in a single layer.',
+          'Bake at 160°C for 25-30 minutes, stirring every 10 minutes.',
+          'The granola should be golden brown.',
+          'Remove from oven and let cool completely.',
+          'Mix in raisins after cooling.',
+          'Store in an airtight container.'
+        ]
+      },
+      brownies: {
+        category: 'Dessert',
+        name: 'Chocolate Brownies',
+        description: 'Rich, fudgy chocolate brownies baked to perfection.',
+        ingredients: [
+          '1 cup all-purpose flour',
+          '3/4 cup cocoa powder',
+          '2 cups sugar',
+          '4 eggs',
+          '1 cup butter (melted)',
+          '1 tsp vanilla extract',
+          '1/2 tsp baking powder',
+          '1/4 tsp salt'
+        ],
+        steps: [
+          'Preheat oven to 175°C and grease a 9x9 inch pan.',
+          'Mix cocoa powder, flour, baking powder, and salt.',
+          'Beat eggs and sugar together until well combined.',
+          'Pour melted butter into the egg mixture and stir.',
+          'Add vanilla extract and mix well.',
+          'Fold in the dry ingredients until just combined.',
+          'Pour batter into the greased pan.',
+          'Bake for 30-35 minutes until a toothpick comes out slightly moist.',
+          'Cool completely and cut into squares.'
+        ]
+      },
+      mousse: {
+        category: 'Dessert',
+        name: 'Mango Mousse',
+        description: 'Light and creamy mango dessert.',
+        ingredients: [
+          '2 ripe mangoes (peeled and diced)',
+          '1 cup heavy cream',
+          '1/2 cup condensed milk',
+          '1 tbsp gelatin powder',
+          '1/4 cup warm water',
+          '1 tbsp lemon juice',
+          'Pinch of salt'
+        ],
+        steps: [
+          'Blend diced mangoes until smooth.',
+          'Mix gelatin powder with warm water and let sit for 5 minutes.',
+          'Heat the gelatin mixture slightly to dissolve completely.',
+          'Let gelatin cool to room temperature.',
+          'Whip heavy cream until soft peaks form.',
+          'Mix mango puree with condensed milk and lemon juice.',
+          'Add cooled gelatin to the mango mixture.',
+          'Fold in the whipped cream gently.',
+          'Pour into glasses and refrigerate for at least 4 hours.',
+          'Serve chilled.'
+        ]
+      },
+      custard: {
+        category: 'Dessert',
+        name: 'Vanilla Custard',
+        description: 'Smooth, creamy vanilla custard dessert.',
+        ingredients: [
+          '2 cups whole milk',
+          '1/2 cup sugar',
+          '5 egg yolks',
+          '1 tbsp cornstarch',
+          '2 tsp vanilla extract',
+          '1/4 tsp salt',
+          '1 tbsp butter'
+        ],
+        steps: [
+          'Heat milk in a pot until steaming (don\'t boil).',
+          'Beat egg yolks with sugar until pale.',
+          'Mix cornstarch and salt into a small bowl.',
+          'Add cornstarch mixture to egg yolks and beat.',
+          'Slowly pour hot milk into the egg mixture, stirring constantly.',
+          'Pour the mixture back into the pot.',
+          'Cook over medium heat, stirring constantly until it thickens (5-7 minutes).',
+          'Remove from heat and add vanilla extract and butter.',
+          'Strain through a fine sieve if needed for smoothness.',
+          'Pour into serving glasses and chill for at least 2 hours.'
+        ]
+      }
+    };
+
+    // Load recipe based on URL parameter
+    function loadRecipe() {
+      const params = new URLSearchParams(window.location.search);
+      const recipeId = params.get('recipe') || 'omelette';
+      const recipe = recipes[recipeId];
+
+      if (recipe) {
+        document.getElementById('recipeCategory').textContent = recipe.category;
+        document.getElementById('recipeName').textContent = recipe.name;
+        document.getElementById('recipeDescription').textContent = recipe.description;
+        document.title = 'Recipe Sharing - ' + recipe.name;
+
+        // Clear and populate ingredients list
+        const ingredientsList = document.getElementById('ingredientsList');
+        ingredientsList.innerHTML = '';
+        recipe.ingredients.forEach(ingredient => {
+          const li = document.createElement('li');
+          li.textContent = ingredient;
+          ingredientsList.appendChild(li);
+        });
+
+        // Clear and populate steps list
+        const stepsList = document.getElementById('stepsList');
+        stepsList.innerHTML = '';
+        recipe.steps.forEach(step => {
+          const li = document.createElement('li');
+          li.textContent = step;
+          stepsList.appendChild(li);
+        });
+      }
+    }
+
+    // Load recipe when page loads
+    loadRecipe();
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* Base styles for a clean, editorial-inspired student project look */
+:root {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --brand: #2f6b4f;
+  --accent: #b24a2d;
+  --text: #2b2b2b;
+  --muted: #6c757d;
+  --border: #e7e3dc;
+}
+
+body {
+  font-family: "Nunito", "Segoe UI", Tahoma, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
+.navbar {
+  background: var(--surface);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.section-title {
+  font-weight: 700;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+}
+
+.hero-badge {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.tag-pill {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  background: #fcfbf8;
+  color: var(--text);
+}
+
+.recipe-card {
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+}
+
+.recipe-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, #f1ece4, #faf7f2);
+  border-bottom: 1px solid var(--border);
+  background-size: cover;
+  background-position: center;
+}
+
+.page-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--brand);
+}

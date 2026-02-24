@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Sharing - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand text-success" href="index.html">Recipe Sharing</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#recipes">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="submit.html">Submit Recipe</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5">
+    <section class="mb-4">
+      <div class="hero p-4 p-lg-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <span class="hero-badge">Student Kitchen</span>
+            <h1 class="hero-title mt-2 mb-3">Fresh, simple recipes shared by students</h1>
+            <p class="text-muted mb-4">
+              Browse easy meals and quick snacks made with everyday ingredients. Add your own recipe
+              to help friends cook better on a budget.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-success" href="submit.html">Submit Recipe</a>
+              <a class="btn btn-outline-success" href="#recipes">Browse Recipes</a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="surface-card overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="p-3">
+                <span class="badge text-bg-light border">Featured</span>
+                <h2 class="h5 mt-2">One-Pot Tomato Pasta</h2>
+                <p class="text-muted mb-3">Low-effort dinner with pantry staples.</p>
+                <a class="btn btn-sm btn-success" href="recipe.html?recipe=pasta">View Recipe</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="section-title mb-3">Popular Categories</h2>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="tag-pill">Breakfast</span>
+        <span class="tag-pill">Lunch</span>
+        <span class="tag-pill">Dinner</span>
+        <span class="tag-pill">Snacks</span>
+        <span class="tag-pill">Dessert</span>
+      </div>
+    </section>
+
+    <section id="recipes">
+      <h2 class="section-title mb-4">Recipes by Category</h2>
+
+      <!-- Breakfast Section -->
+      <div class="mb-5">
+        <h3 class="h5 mb-3">Breakfast</h3>
+        <div class="row g-4">
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Breakfast</span>
+                <h4 class="h5 mt-2">Cheesy Veg Omelette</h4>
+                <p class="text-muted">Quick protein-packed breakfast with veggies and cheese.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=omelette">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Breakfast</span>
+                <h3 class="h5 mt-2">Banana Pancakes</h3>
+                <p class="text-muted">Fluffy pancakes made with ripe bananas and flour.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=pancakes">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Breakfast</span>
+                <h3 class="h5 mt-2">Peanut Butter Toast</h3>
+                <p class="text-muted">Creamy peanut butter on toast with a drizzle of honey.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=toast">View Recipe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Lunch Section -->
+      <div class="mb-5">
+        <h3 class="h5 mb-3">Lunch</h3>
+        <div class="row g-4">
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Lunch</span>
+                <h3 class="h5 mt-2">Spicy Chickpea Wrap</h3>
+                <p class="text-muted">Affordable wrap with chickpeas, salad, and yogurt sauce.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=wrap">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Lunch</span>
+                <h3 class="h5 mt-2">Veg Fried Rice</h3>
+                <p class="text-muted">Quick and tasty fried rice with mixed vegetables.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=rice">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Lunch</span>
+                <h3 class="h5 mt-2">Paneer Sandwich</h3>
+                <p class="text-muted">Grilled paneer sandwich with fresh veggies and mayo.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=sandwich">View Recipe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Dinner Section -->
+      <div class="mb-5">
+        <h3 class="h5 mb-3">Dinner</h3>
+        <div class="row g-4">
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dinner</span>
+                <h3 class="h5 mt-2">One-Pot Tomato Pasta</h3>
+                <p class="text-muted">Simple pasta cooked in one pot with herbs and tomatoes.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=pasta">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dinner</span>
+                <h3 class="h5 mt-2">Lentil Soup</h3>
+                <p class="text-muted">Warming lentil soup with carrots and cumin spice.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=soup">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dinner</span>
+                <h3 class="h5 mt-2">Garlic Rice with Beans</h3>
+                <p class="text-muted">Fluffy garlic rice served with butter beans.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=garlicrice">View Recipe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Snacks Section -->
+      <div class="mb-5">
+        <h3 class="h5 mb-3">Snacks</h3>
+        <div class="row g-4">
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Snacks</span>
+                <h3 class="h5 mt-2">Cheese Nachos</h3>
+                <p class="text-muted">Crispy nachos loaded with melted cheese and jalapeños.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=nachos">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Snacks</span>
+                <h3 class="h5 mt-2">Roasted Chickpeas</h3>
+                <p class="text-muted">Crunchy roasted chickpeas with herbs and spices.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=chickpeas">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Snacks</span>
+                <h3 class="h5 mt-2">Homemade Granola</h3>
+                <p class="text-muted">Crunchy granola with oats, nuts, and honey.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=granola">View Recipe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Dessert Section -->
+      <div class="mb-5">
+        <h3 class="h5 mb-3">Dessert</h3>
+        <div class="row g-4">
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dessert</span>
+                <h3 class="h5 mt-2">Chocolate Brownies</h3>
+                <p class="text-muted">Fudgy brownies made with cocoa powder and dark chocolate.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=brownies">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dessert</span>
+                <h3 class="h5 mt-2">Mango Mousse</h3>
+                <p class="text-muted">Smooth and creamy mousse made with fresh mangoes.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=mousse">View Recipe</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card recipe-card h-100 overflow-hidden">
+              <div class="recipe-thumb"></div>
+              <div class="card-body">
+                <span class="badge text-bg-light border">Dessert</span>
+                <h3 class="h5 mt-2">Vanilla Custard</h3>
+                <p class="text-muted">Classic vanilla custard served chilled with cookies.</p>
+                <a class="btn btn-success btn-sm" href="recipe.html?recipe=custard">View Recipe</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white py-4">
+    <div class="container">
+      <div class="text-center">
+        <h4 class="h6 mb-1">Recipe Sharing</h4>
+        <p class="text-muted mb-0">Copyright (c) 2026 Recipe Sharing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
