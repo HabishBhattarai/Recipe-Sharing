@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#efe7c8"/>
+      <stop offset="100%" stop-color="#d6c88b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="285" rx="220" ry="110" fill="#ffffff"/>
+  <ellipse cx="400" cy="280" rx="175" ry="80" fill="#f4f0df"/>
+  <ellipse cx="465" cy="280" rx="35" ry="23" fill="#c4a77b"/>
+  <ellipse cx="335" cy="260" rx="32" ry="21" fill="#c4a77b"/>
+  <text x="40" y="70" font-family="Segoe UI, Arial" font-size="44" fill="#4f4a2a" font-weight="700">Garlic Rice with Beans</text>
+</svg>

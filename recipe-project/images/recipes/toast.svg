@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7e1c4"/>
+      <stop offset="100%" stop-color="#e6b287"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="270" y="130" width="260" height="240" rx="50" fill="#c27b3f"/>
+  <rect x="292" y="152" width="216" height="196" rx="40" fill="#9a5f2d"/>
+  <path d="M305 240 C360 200, 440 290, 495 235 L495 325 L305 325 Z" fill="#d6a74a" opacity="0.92"/>
+  <text x="40" y="70" font-family="Segoe UI, Arial" font-size="44" fill="#4b2d15" font-weight="700">Peanut Butter Toast</text>
+</svg>

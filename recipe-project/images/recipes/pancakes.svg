@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffe9b5"/>
+      <stop offset="100%" stop-color="#ffc58a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <ellipse cx="400" cy="300" rx="180" ry="42" fill="#b67643"/>
+  <ellipse cx="400" cy="260" rx="190" ry="46" fill="#ca854b"/>
+  <ellipse cx="400" cy="220" rx="200" ry="50" fill="#db9858"/>
+  <circle cx="510" cy="175" r="42" fill="#ffd266"/>
+  <text x="40" y="70" font-family="Segoe UI, Arial" font-size="44" fill="#50351e" font-weight="700">Banana Pancakes</text>
+</svg>

@@ -13,6 +13,7 @@ function initializeUserSession() {
 
 function updateNavbar(currentUser) {
 	const navLinks = document.querySelector("#mainNav .navbar-nav");
+	const authActions = document.querySelector("#mainNav .d-flex.gap-2");
 	if (!navLinks) return;
 
 	// Remove existing login/register/dashboard links
@@ -20,33 +21,19 @@ function updateNavbar(currentUser) {
 	existingLinks.forEach((link) => link.remove());
 
 	if (currentUser) {
-		// User is logged in - show dashboard and logout
-		const dashboardLi = document.createElement("li");
-		dashboardLi.className = "nav-item";
-		dashboardLi.setAttribute("data-nav-auth", "true");
-		dashboardLi.innerHTML = `<a class="nav-link" href="dashboard.html">Dashboard</a>`;
-		navLinks.appendChild(dashboardLi);
-
-		const logoutLi = document.createElement("li");
-		logoutLi.className = "nav-item";
-		logoutLi.setAttribute("data-nav-auth", "true");
-		logoutLi.innerHTML = `
-			<button class="btn btn-sm btn-outline-danger ms-2" onclick="logout()">Logout</button>
-		`;
-		navLinks.appendChild(logoutLi);
+		if (authActions) {
+			authActions.innerHTML = `
+				<a class="btn btn-outline-success btn-sm" href="dashboard.html">Dashboard</a>
+				<button class="btn btn-outline-danger btn-sm" onclick="logout()">Logout</button>
+			`;
+		}
 	} else {
-		// User is not logged in - show login and register
-		const loginLi = document.createElement("li");
-		loginLi.className = "nav-item";
-		loginLi.setAttribute("data-nav-auth", "true");
-		loginLi.innerHTML = `<a class="nav-link" href="login.html">Login</a>`;
-		navLinks.appendChild(loginLi);
-
-		const registerLi = document.createElement("li");
-		registerLi.className = "nav-item";
-		registerLi.setAttribute("data-nav-auth", "true");
-		registerLi.innerHTML = `<a class="nav-link" href="register.html">Register</a>`;
-		navLinks.appendChild(registerLi);
+		if (authActions) {
+			authActions.innerHTML = `
+				<a class="btn btn-outline-success btn-sm" href="login.html">Login</a>
+				<a class="btn btn-success btn-sm" href="register.html">Register</a>
+			`;
+		}
 	}
 }
 
